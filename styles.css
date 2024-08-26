@@ -1,0 +1,47 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    flex-direction: column;
+}
+
+.info {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 20px);
+    font-size: 1.2em;
+}
+
+.level,
+.score,
+.goal {
+    margin-right: 20px;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    /* 4列 */
+    grid-template-rows: repeat(4, 80px);
+    /* 4行 */
+    gap: 10px;
+}
+
+.hole {
+    width: 80px;
+    height: 80px;
+    background-color: #8b4513;
+    position: relative;
+}
+
+.hole.active {
+    background-color: #ff6347;
+}
