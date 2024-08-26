@@ -45,3 +45,24 @@ body {
 .hole.active {
     background-color: #ff6347;
 }
+
+/* 闪烁背景动画 */
+@keyframes flash {
+    0% {
+        background-color: #f0f0f0;
+    }
+
+    50% {
+        background-color: #ffeb3b;
+    }
+
+    /* 闪烁的颜色 */
+    100% {
+        background-color: #f0f0f0;
+    }
+}
+
+.flash {
+    animation: flash 0.5s;
+    /* 闪烁动画持续时间 */
+}

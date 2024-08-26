@@ -21,6 +21,13 @@ function showMole() {
     activeHole.classList.add('active');
 }
 
+function flashBackground() {
+    document.body.classList.add('flash');
+    setTimeout(() => {
+        document.body.classList.remove('flash');
+    }, 500); // 动画持续时间
+}
+
 holes.forEach(hole => {
     hole.addEventListener('click', () => {
         if (hole === activeHole) {
@@ -34,10 +41,13 @@ holes.forEach(hole => {
                 navigator.vibrate(100); // 震动 100 毫秒
             }
 
+            // 背景闪烁
+            flashBackground();
+
             // 检查是否完成当前关卡
             if (score >= goal) {
                 level++;
-                goal = level * 5; // 每个关卡目标增加10分
+                goal = level * 10; // 每个关卡目标增加10分
                 levelSpan.textContent = level;
                 goalSpan.textContent = goal;
                 score = 0; // 重置分数
