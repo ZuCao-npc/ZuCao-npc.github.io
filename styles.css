@@ -53,7 +53,7 @@ body {
     }
 
     50% {
-        background-color: #ffeb3b;
+        background-color: rgb(182, 182, 182);
     }
 
     /* 闪烁的颜色 */
